@@ -1,7 +1,15 @@
 <?php 
 session_start();
+include "(koneksi.php)";
+if (isset($_POST['login'])){
+    $nama = $_POST ["nama"];
+    $email = $_POST ["email"];
+    $nohp = $_POST ["nohp"];
+    $password = $_POST ["password"];
+    
+}
 
-$konfig = ""
+
 
 ?>
 
@@ -12,7 +20,7 @@ $konfig = ""
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masuk - Member Kopi Nusantara</title>
     <style>

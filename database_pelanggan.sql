@@ -27,3 +27,4 @@ INSERT INTO `tb_pelanggan` (`id_pelanggan`, `nama_lengkap`, `email`, `no_hp`, `p
 (2, 'Siti Nurhaliza', 'siti@gmail.com', '081298765432', MD5('senja123'), 'Aktif', '2026-11-03 10:15:00'),
 (3, 'Andi Wijaya', 'andi@gmail.com', '085711223344', MD5('nusantara'), 'Nonaktif', '2026-11-05 14:00:00');
 
+SELECT * FROM db_kopi_member;

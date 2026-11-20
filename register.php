@@ -1,5 +1,15 @@
 <?php
 include "(koneksi.php)";
+if (isset($_POST['masuk'])){
+    $nama = $_POST ["nama"];
+    $email = $_POST ["email"];
+    $nohp = $_POST ["nohp"];
+    $password = $_POST ["password"];
+    $ulangi_password = $_POST ["ulangi_pssword"];
+    $passwordhash = password_hash($password, PASSWORD_DEFAULT);
+
+    if (empty(nama Lengkap))
+}
 
 ?>
 

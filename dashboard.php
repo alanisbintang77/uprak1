@@ -2,7 +2,7 @@
 session_start();
 
 if(isset($_SESSION["login berhasil"]) && !$_SESSION ["login berhasil"]){
-    header ("localhost;dbname.database_pelanggan");
+    header ("location:login-php");
 }
 
 ?>
