@@ -11,7 +11,7 @@ if (isset($_POST['masuk'])){
     if (empty($nama) || empty($email) || empty($nohp) || empty($password)){
         $error = " semua field wajib di isi !";
     } else {
-        
+       
     }          
 }
 

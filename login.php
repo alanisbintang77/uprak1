@@ -11,16 +11,13 @@ try {
 if (empty($email) || empty($password)){
     $error = "semua field wajib diisi !";
 }else {
-    $query = "select * from tb_pengguna where email";
-}
-
-$query = "select * from tb_pelanggan where email=:email";
+    $query = "select * from tb_pelanggan where email=:email";
     $komando = $koneksi-> prepare($query);
     $komando->execute([
         "email" => $email,
     ]);
-    
-    if($komando -> rowCount() >0 ) {
+}  
+    if($komando -> rowCount() > 0 ) {
         $hasil= $komando ->fetch(PDO :: FETCH_ASSOC);
         if (password_verify($password, $hasil['password'])){
            
