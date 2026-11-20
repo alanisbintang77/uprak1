@@ -28,3 +28,4 @@ INSERT INTO `tb_pelanggan` (`id_pelanggan`, `nama_lengkap`, `email`, `no_hp`, `p
 (3, 'Andi Wijaya', 'andi@gmail.com', '085711223344', MD5('nusantara'), 'Nonaktif', '2026-11-05 14:00:00');
 
 SELECT*from tb_pelanggan;
+
