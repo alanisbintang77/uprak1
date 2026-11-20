@@ -1,8 +1,9 @@
 <?php
-session_start();
+include "koneksi.php";
 
-if(isset($_SESSION["login berhasil"]) && !$_SESSION ["login berhasil"]){
+if(isset($_SESSION['tb_pelanggan'])){
     header ("location:login-php");
+    exit();
 }
 
 ?>

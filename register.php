@@ -1,5 +1,5 @@
 <?php
-include "(koneksi.php)";
+include "koneksi.php";
 if (isset($_POST['masuk'])){
     $nama = $_POST ["nama"];
     $email = $_POST ["email"];
@@ -9,12 +9,10 @@ if (isset($_POST['masuk'])){
     $passwordhash = password_hash($password, PASSWORD_DEFAULT);
 
     if (empty($nama) || empty($email) || empty($nohp) || empty($password)){
-        $error = " semua field wajib diisi !";
-    }else {
-        ((ctype_alpha($password) || ctype_digit($password))){
-
-        }
-    }
+        $error = " semua field wajib di isi !";
+    } else {
+        
+    }          
 }
 
 ?>

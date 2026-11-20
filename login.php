@@ -1,18 +1,21 @@
 <?php 
 session_start();
-
-include "koneksi.php";
-
 if(isset($_POST['login'])){
-   $nama = $_POST ["nama"];
-    $email = $_POST ["email"];
-    $nohp = $_POST ["nohp"];
-    $password = $_POST ["password"];
-    $ulangi_password = $_POST ["ulangi_pssword"];
-    $passwordhash = password_hash($password, PASSWORD_DEFAULT);
+   
+try { 
+  $email = $_POST ['email'];
+  $password = $_POST ['password'];
+  $passwordhash = password_hash($password, PASSWORD_DEFAULT);
+}
 
-    $query = "select * from tb_pelanggan where email=:email";
-    $komando = $koneksi->prepare($query);
+if (empty($email) || empty($password)){
+    $error = "semua field wajib diisi !";
+}else {
+    $query = "select * from tb_pengguna where email";
+}
+
+$query = "select * from tb_pelanggan where email=:email";
+    $komando = $koneksi-> prepare($query);
     $komando->execute([
         "email" => $email,
     ]);
@@ -23,6 +26,7 @@ if(isset($_POST['login'])){
            
         }
     }    
+    
 }
 
 
