@@ -1,14 +1,29 @@
 <?php 
 session_start();
-include "(koneksi.php)";
-if (isset($_POST['login'])){
-    $nama = $_POST ["nama"];
+
+include "koneksi.php";
+
+if(isset($_POST['login'])){
+   $nama = $_POST ["nama"];
     $email = $_POST ["email"];
     $nohp = $_POST ["nohp"];
     $password = $_POST ["password"];
-    
-}
+    $ulangi_password = $_POST ["ulangi_pssword"];
+    $passwordhash = password_hash($password, PASSWORD_DEFAULT);
 
+    $query = "select * from tb_pelanggan where email=:email";
+    $komando = $koneksi->prepare($query);
+    $komando->execute([
+        "email" => $email,
+    ]);
+    
+    if($komando -> rowCount() >0 ) {
+        $hasil= $komando ->fetch(PDO :: FETCH_ASSOC);
+        if (password_verify($password, $hasil['password'])){
+           
+        }
+    }    
+}
 
 
 ?>

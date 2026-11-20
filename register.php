@@ -8,7 +8,13 @@ if (isset($_POST['masuk'])){
     $ulangi_password = $_POST ["ulangi_pssword"];
     $passwordhash = password_hash($password, PASSWORD_DEFAULT);
 
-    if (empty(nama Lengkap))
+    if (empty($nama) || empty($email) || empty($nohp) || empty($password)){
+        $error = " semua field wajib diisi !";
+    }else {
+        ((ctype_alpha($password) || ctype_digit($password))){
+
+        }
+    }
 }
 
 ?>
